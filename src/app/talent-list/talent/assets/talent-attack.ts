@@ -1,8 +1,4 @@
-import { TalentAsset } from './talent-asset.interface';
-
-interface TalentAssetCoordinates { coordinates: { left: string; top: string }; }
-interface Line { left: string; top: string; width: string; transform: string; }
-type TalentAssetWithCSS = TalentAsset & TalentAssetCoordinates & { lines: Array<Line> };
+import { TalentAssetWithCSS } from './talent-asset.interface';
 
 const talentAttackAssetWithCSS: Array<TalentAssetWithCSS> = [
     {

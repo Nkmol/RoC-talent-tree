@@ -9,7 +9,7 @@ export class TalentSVGComponent {
 
     @Input()
     set image(image: string) {
-        this.imagePath = `talent-list/talent/assets/images/${image}.png`;
+        this.imagePath = `talent-list/talent/assets/images/${image.toLocaleLowerCase()}.png`;
     }
 
     constructor() { }

@@ -1,6 +1,8 @@
+import { TalentAsset } from './assets/talent-asset.interface';
+
 export type TalentArrayType = Map<string, TalentModel>;
 
-export class TalentModel {
+export class TalentModel implements TalentAsset {
     constructor(
         public readonly name: string = '', 
         public readonly description: string = '',

@@ -1,9 +1,8 @@
 <div class="talents-wrapper">
     <app-talent 
-        *ngFor="let talentKV of talents| keyvalue" 
+        *ngFor="let talentKV of talents | async | keyvalue" 
         [talent]="talentKV.value" 
-        [getTalentFunction]="getTalent"
-        [ngStyle]="talentKV.value.coordinate">
+        [ngStyle]="talentKV.value.coordinates">
     </app-talent>
     <div class="commander-icon"></div>
 </div>

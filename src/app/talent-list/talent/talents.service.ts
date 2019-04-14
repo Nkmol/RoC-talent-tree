@@ -1,20 +1,23 @@
 import { Injectable } from '@angular/core';
-import { TalentModel, TalentArrayType } from '@src/talent-list/talent/talent.model';
-import talentJSON from './assets/talents.json';
+import { TalentArrayType, TalentModel } from '@src/talent-list/talent/talent.model';
+
+import { talentAttackAssetWithCSS } from './assets/talent-attack';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
 export class TalentsService {
-    constructor() { }
+  public talents = new BehaviorSubject<TalentArrayType>(new Map());
 
-    getTalents(): TalentArrayType {
-        const result: TalentArrayType = new Map();
-        talentJSON.forEach(entity => {
-            const talent: TalentModel = Object.assign(new TalentModel(), entity);
-            talent.totalLevel = talent.values[0].length;
-            result.set(talent.name, talent);
-        });
-        return result;
-    }
+  constructor() {}
+
+  public loadTalents(): void {
+    const result: TalentArrayType = new Map();
+    talentAttackAssetWithCSS.forEach((entity) => {
+      const talent = new TalentModel(entity);
+      result.set(talent.name, talent);
+    });
+    this.talents.next(result);
+  }
 }

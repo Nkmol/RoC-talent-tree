@@ -2,11 +2,11 @@
     <app-talent 
         *ngFor="let talentKV of talents | async | keyvalue" 
         [talent]="talentKV.value" 
-        [ngStyle]="talentKV.value.coordinate">
+        [ngStyle]="talentKV.value.coordinates">
     </app-talent>
     <div class="commander-icon"></div>
 </div>
-<!-- <div class="btn-wrapper-reset">
+<div class="btn-wrapper-reset">
     Total Points: {{totalPoints}} <button class="btn btn-red" (click)="reset()">Reset</button>
 </div>
 <div class="btn-wrapper-generate">
@@ -20,4 +20,4 @@
     </div>
 
     <button class="btn btn-red" (click)="shareModal.close()">Close</button>
-</ngx-smart-modal> -->
+</ngx-smart-modal>

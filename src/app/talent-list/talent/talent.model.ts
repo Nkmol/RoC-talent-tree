@@ -7,7 +7,7 @@ class TalentModel implements TalentAsset {
   public readonly description: string = '';
   public readonly values: Array<Array<number>> = [];
   public readonly required: Array<string> = [];
-  public readonly coordinate: any;
+  public readonly coordinates: any;
   public readonly type: string = '';
   public readonly lines: Array<any> = [];
   public readonly dependencies: Array<string> = [];

@@ -11,12 +11,12 @@ const talentAttackAssetWithCSS: Array<TalentAssetWithCSS> = [
         ],
         coordinates: {
             left: '705px',
-            top: '32px',
+            top: '320px',
         },
         lines: [
             {
-                top: '565px',
-                left: '686px',
+                top: '0',
+                left: '26px',
                 width: '30px',
                 transform: 'rotate(-30deg)',
             }

@@ -7,10 +7,14 @@ interface TalentAsset {
 interface TalentAssetCoordinates {
   coordinates: { left: string; top: string };
 }
+
+/**
+ * Relative to the talent-image
+ */
 interface Line {
-  left: string;
-  top: string;
-  width: string;
+  left: string; // Top left
+  top: string; // Top left middle of line
+  width: string; // TODO: change naming to "length"
   transform: string;
   dependencies?: string;
 }

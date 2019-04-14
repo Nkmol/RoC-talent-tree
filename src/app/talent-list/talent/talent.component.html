@@ -4,7 +4,6 @@
     <div class="talent-image"
             [popper]="tooltipContent" 
             popperTrigger="click">
-        <app-talent-svg [image]="talent.name"></app-talent-svg>
         <div class="talent-line" *ngFor="let line of talent.lines" [ngStyle]="line"></div>
     </div>
     <popper-content class="talent-description"  #tooltipContent>

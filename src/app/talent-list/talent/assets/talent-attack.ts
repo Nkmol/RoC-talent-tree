@@ -15,10 +15,10 @@ const talentAttackAssetWithCSS: Array<TalentAssetWithCSS> = [
         },
         lines: [
             {
-                top: '0',
-                left: '26px',
+                top: '-11px',
+                left: '-17px',
                 width: '30px',
-                transform: 'rotate(-30deg)',
+                transform: 'rotate(30deg)',
             }
         ]
     }
